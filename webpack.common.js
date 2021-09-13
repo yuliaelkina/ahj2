@@ -1,14 +1,15 @@
 const path = require('path');
+const { merge } = require('webpack-merge');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
   target: 'web',
-  entry: __dirname + "/src/index.js",
+  entry: path.resolve(__dirname, '/src/index.js'),
   output: {
     path: path.resolve(__dirname, 'dist'),
     publicPath: '',
-    assetModuleFilename: 'img/[name][ext]'
+    assetModuleFilename: 'img/[name][ext]',
   },
   module: {
     rules: [
@@ -18,7 +19,7 @@ module.exports = {
         use: [
           {
             loader: 'babel-loader',
-          }
+          },
         ],
       },
       {
