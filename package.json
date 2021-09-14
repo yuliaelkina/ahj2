@@ -19,6 +19,7 @@
   "author": "coursar",
   "license": "MIT",
   "devDependencies": {
+    "copy-webpack-plugin": "^9.0.1",
     "eslint": "^7.17.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-import": "^2.22.1",
